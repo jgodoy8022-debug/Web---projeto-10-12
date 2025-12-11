@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="enviarDados()">
+        <label>Usuário:</label>
+        <input type=" text" name="Usuário" id="usuario-input">
+
+        <label> Senha:</label>
+        <input type="password" name="password" id="password-input">
+
+        <button type="enviarDados">clique para testar</button>
+    </form>
+
+</body>
+<script>
+    
+    function enviarDados() {
+        event.preventDefault()
+        const inputName = document.getElementById ('usuario-input');
+        console.log(inputName)
+        const inputSenha = document.getElementById('password-input');
+        console.log(inputSenha)
+        
+
+       if (inputName.value == "admi" && inputSenha.value == "1234") {
+        alert ("USUARIO LOGOU!")
+        window.location.href = "https://www.google.com.br";
+       }
+        else{
+            alert( "Tá fazendo merda!")
+        }
+    }
+</script>
+</html>
